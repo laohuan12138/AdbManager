@@ -77,8 +77,10 @@
 scoop install android-platform-tools
 # 或
 choco install androidstudio
+# 下载地址
+https://developer.android.com/tools/releases/platform-tools?hl=zh-cn
 ```
-
+ 
 2. **克隆项目**
 ```bash
 git clone https://github.com/yourusername/AdbManager.git
@@ -88,7 +90,7 @@ cd AdbManager
 3. **编译运行**
 ```bash
 # 编译
-go build -o AdbManager.exe ./...
+go build -ldflags="-s -w" -o AdbManager.exe
 
 # 运行
 ./AdbManager.exe
